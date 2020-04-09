@@ -1,6 +1,7 @@
 package me.leon
 
 
+import javax.print.Doc
 import kotlin.math.pow
 
 object WenShu {
@@ -8,9 +9,9 @@ object WenShu {
 
     @JvmStatic
     fun main(args: Array<String>) {
-//        getList()
+        getList()
 
-        getDetail()
+//        getDetail()
 
 //        threeDes()
 //        binary()
@@ -50,14 +51,15 @@ object WenShu {
                 "http://wenshuapp.court.gov.cn/appinterface/rest.q4w",
                 //                        "request=eyJpZCI6IjIwMjAwMzEyMTYyNDQ2IiwiY29tbWFuZCI6InF1ZXJ5RG9jIiwicGFyYW1zIjp7InBhZ2VOdW0iOiIxIiwic29ydEZpZWxkcyI6InM1MDpkZXNjIiwiY2lwaGVydGV4dCI6IjExMDEwMTAgMTEwMTAwIDEwMDAwMTEgMTAwMDAxMSAxMTAwMTEwIDEwMTAwMDAgMTEwMTAwIDExMDAxMTEgMTEwMDEwMSAxMDAwMDExIDEwMTEwMDEgMTEwMDAwMSAxMDEwMDAxIDExMTAwMCAxMDAwMTAxIDExMDExMDEgMTEwMTExIDEwMDAxMTEgMTExMDEwMSAxMDEwMDAwIDEwMTAwMTEgMTAxMDExMCAxMTEwMTEwIDExMDExMTAgMTEwMDEwIDExMDAwMCAxMTAwMTAgMTEwMDAwIDExMDAwMCAxMTAwMTEgMTEwMDAxIDExMDAxMCAxMDAxMDEwIDExMDAxMDEgMTEwMTAxMCAxMTExMDAwIDEwMTAxMDAgMTEwMTExMCAxMTEwMDAwIDEwMDAwMDEgMTExMTAxMCAxMTAxMDAwIDExMDAxMSAxMDAxMDEwIDExMDAwMCAxMDAxMTEwIDExMDAxMTAgMTEwMTEwIDExMDAxMTAgMTAxMTAxMCAxMTAxMTAxIDExMDAwMDEgMTAwMDExMCAxMTEwMTExIDExMTEwMSAxMTExMDEiLCJkZXZpZCI6IjIzYTljOTgyOGRhNDQzYWJiY2ZhOGFiNDUyMjAxZmFiIiwiZGV2dHlwZSI6IjEiLCJwYWdlU2l6ZSI6IjIwIiwicXVlcnlDb25kaXRpb24iOlt7ImtleSI6InM4IiwidmFsdWUiOiIwMSJ9XX19",
                 "request=${q.toJson().b64()}",
-                WenShuList::class.java, null
+                WenShuRsp::class.java, null
             )
         println(result)
 
         val decryptTxt = Encrypt.desDecrypt(result.data.content, result.data.secretKey)
         println(decryptTxt)
 
-        val r = GsonUtil.fromJson(decryptTxt, QueryList::class.java)
+        val r = decryptTxt.fromJson<QueryList>()
+
 //        println(r)
 //        println(r.queryResult.resultList.size)
         r.queryResult.resultList.map { it.casename }.let(::println)
@@ -84,13 +86,13 @@ object WenShu {
                 "http://wenshuapp.court.gov.cn/appinterface/rest.q4w ",
 //                        "request=eyJpZCI6IjIwMjAwMzEyMTcyNTI1IiwiY29tbWFuZCI6ImRvY0luZm9TZWFyY2giLCJwYXJhbXMiOnsiY2lwaGVydGV4dCI6IjEwMTAxMDAgMTEwMDAxMCAxMDAwMDAxIDExMDExMDAgMTAwMDAxMCAxMTAwMDExIDEwMTEwMDAgMTAwMDAxMSAxMTEwMTExIDEwMTAxMTAgMTEwMDAxMSAxMTEwMTAxIDEwMTAxMTAgMTEwMTAwIDExMDAxMTEgMTEwMDAxMCAxMTAwMDEgMTExMTAxMCAxMDAxMDEwIDExMDAxMTAgMTAwMTAxMSAxMTAwMDAxIDEwMTAwMTEgMTAxMDAwMSAxMTAwMTAgMTEwMDAwIDExMDAxMCAxMTAwMDAgMTEwMDAwIDExMDAxMSAxMTAwMDEgMTEwMDEwIDExMTAwMCAxMDEwMTExIDEwMTAwMTEgMTAxMDAxMSAxMTAwMDEwIDEwMDAxMTAgMTExMDAxIDExMDAxMTAgMTExMDAwIDEwMDEwMTEgMTEwMDExMSAxMTAxMTAxIDExMTAxMTEgMTExMDEwMSAxMTAxMDAgMTEwMTAwIDEwMTAxMTAgMTEwMDAxMSAxMDEwMTEwIDEwMDAxMDEgMTExMTAwMSAxMDAwMDAxIDExMTEwMSAxMTExMDEiLCJkb2NJZCI6IjQwZDA2NTUxYjdmNDQ2YTdiOTU2YWI3NjAwYzMwZGQyIiwiZGV2dHlwZSI6IjEiLCJkZXZpZCI6IjIzYTljOTgyOGRhNDQzYWJiY2ZhOGFiNDUyMjAxZmFiIn19"
                 "request=${q.toJson().b64()}"
-                , WenShuDetail::class.java, null
+                , WenShuRsp::class.java, null
             )
 //        println(detail)
 
         val detailTxt = Encrypt.desDecrypt(detail.data.content, detail.data.secretKey)
         println(detailTxt)
-        println(GsonUtil.fromJson(detailTxt, DocDetail::class.java))
+        println(detailTxt.fromJson<DocDetail>())
 
     }
 

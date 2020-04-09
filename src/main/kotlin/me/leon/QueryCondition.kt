@@ -43,6 +43,9 @@ data class QueryList(
 
     data class GoupFieldMap(val a: String) {}
 
+    /**
+     * 对数字key 做了单独的映射
+     */
     data class Result(
         @SerializedName("1")
         val casename: String,

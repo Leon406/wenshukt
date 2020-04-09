@@ -20,4 +20,4 @@ object GsonUtil {
 // json 转换扩展
 fun Any.toJson() = GsonUtil.toJson(this)
 
-fun <T> String.fromJson(clazz: Class<T>) = GsonUtil.fromJson(this, clazz)
+inline fun <reified T> String.fromJson() = GsonUtil.fromJson(this, T::class.java)

@@ -94,7 +94,6 @@ public class OkHttpUtils {
      *
      * @param url     网址
      * @param clazz   class字节码
-     * @param json    json字符串
      * @param headers 请求头 header map
      * @param <T>     泛型T
      * @return T

@@ -5,7 +5,7 @@ package me.leon
  * @since     2020-03-12
  * @version   1.0.0
  **/
-data class WenShuList(
+data class WenShuRsp(
     val `data`: Data,
     val ret: Ret
 ){
