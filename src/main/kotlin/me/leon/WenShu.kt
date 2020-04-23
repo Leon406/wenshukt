@@ -8,7 +8,7 @@ object WenShu {
 
     @JvmStatic
     fun main(args: Array<String>) {
-//        getList()
+        getList()
 
         getDetail()
 
