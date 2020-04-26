@@ -45,12 +45,21 @@ data class QueryList(
 
     /**
      * 对数字key 做了单独的映射
+     *
+     * 1,2,7,9,10,26,31,32,43,44
+     *
+     *   9  10  32  44 请参考网页版
      */
     data class Result(
         @SerializedName("1")
         val casename: String,
         @SerializedName("2")
         val courtname: String,
+
+//        @SerializedName("5")
+//        val wenshuid: String,
+        @SerializedName("7")
+        val caseno: String,
         @SerializedName("26")
         val content: String,
         @SerializedName("31")
@@ -58,12 +67,10 @@ data class QueryList(
 
         @SerializedName("43")
         val type: String,
-        @SerializedName("7")
-        val caseno: String,
 
-        @SerializedName("5")
-        val wenshuid: String,
-        val rowkey: String
+        @SerializedName("rowkey")
+        val wenshuid: String
+
     )
 
 }

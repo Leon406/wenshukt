@@ -8,6 +8,7 @@ object WenShu {
 
     @JvmStatic
     fun main(args: Array<String>) {
+
         getList()
 
         getDetail()
@@ -25,9 +26,12 @@ object WenShu {
 
     private fun getDocList(page: Int = 1, pageSize: Int = 20) {
         val params = mapOf(
-            "pageNum" to page.toString(), "pageSize" to pageSize.toString(),
-            "sortFields" to "s50:desc", "ciphertext" to Cipher.binary(),
-            "devid" to "23a9c9828da443abbcfa8ab452201faa", "devtype" to 1.toString(),
+            "pageNum" to page.toString(),
+            "pageSize" to pageSize.toString(),
+            "sortFields" to "s50:desc",
+            "ciphertext" to Cipher.binary(),
+            "devid" to "23a9c9828da443abbcfa8ab452201faa",
+            "devtype" to 1.toString(),
             "queryCondition" to mutableListOf(QueryCondition("s8", "03"))
         )
 
@@ -46,14 +50,16 @@ object WenShu {
                 "request=${q.toJson().b64()}",
                 WenShuRsp::class.java, null
             )
-        println(result)
+//        println(result)
 
         val decryptTxt = Encrypt.desDecrypt(result.data.content, result.data.secretKey)
+        //这里是解密后的结果,
         println(decryptTxt)
 
         val r = decryptTxt.fromJson<QueryList>()
 
-        r.queryResult.resultList.map { it.casename }.let(::println)
+        r.queryResult.resultList.also { println(it) }
+            .map { it.casename }.let(::println)
     }
 
 
@@ -68,6 +74,7 @@ object WenShu {
         val q = mapOf(
             "id" to Cipher.stamp,
             "command" to "docInfoSearch",
+            "cfg" to "com.lawyee.judge.dc.parse.dto.SearchDataDsoDTO@docInfoSearch",
             "params" to params
         )
 
