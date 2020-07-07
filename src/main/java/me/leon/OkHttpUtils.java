@@ -111,7 +111,7 @@ public class OkHttpUtils {
         makeHeader(headers, builder);
         Request request = builder.build();
         String result = client.newCall(request).execute().body().string();
-//        System.out.println(result);
+        System.out.println(result);
         return (T) GsonUtil.INSTANCE.fromJson(result, clazz);
     }
 

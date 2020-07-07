@@ -53,13 +53,6 @@ public class Cipher {
             }
             stringBuffer.append(Integer.toBinaryString(chars[i]));
         }
-//        String[] split = str.split("");
-//        for (int i = 0; i < split.length; i++) {
-//            if (i != 0) {
-//                stringBuffer.append(" ");
-//            }
-//            stringBuffer.append(Integer.toBinaryString(split[i].charAt(0)));
-//        }
         return stringBuffer.toString();
     }
 }

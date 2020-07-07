@@ -69,7 +69,7 @@ data class QueryList(
         val type: String,
 
         @SerializedName("rowkey")
-        val wenshuid: String
+        val docId: String
 
     )
 
