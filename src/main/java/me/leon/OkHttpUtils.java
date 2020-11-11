@@ -1,16 +1,15 @@
 package me.leon;
 
 
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
 
 /**
  * <p>description：</p>
@@ -24,7 +23,7 @@ public class OkHttpUtils {
 
     private OkHttpUtils() {
 
-        client =   new OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS)
+        client = new OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS).build();
     }
 
@@ -41,6 +40,7 @@ public class OkHttpUtils {
 
         return (T) GsonUtil.INSTANCE.fromJson(client.newCall(request).execute().body().string(), clazz);
     }
+
     public String getBody(String url, Map<String, String> headers) throws IOException {
 
         Request.Builder builder = new Request.Builder()
