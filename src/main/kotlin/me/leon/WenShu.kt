@@ -7,11 +7,11 @@ object WenShu {
     @JvmStatic
     fun main(args: Array<String>) {
 
-//        getList()
+        getList()
 
         //详情可以用手机端的接口
-        getDetail("562110e60b3145099361ac8800c0aa89")
-        getDetail("fbb3658a336d4ebcbec6ac8300a33e87")
+//        getDetail("562110e60b3145099361ac8800c0aa89")
+//        getDetail("fbb3658a336d4ebcbec6ac8300a33e87")
 
     }
 
@@ -32,11 +32,13 @@ object WenShu {
             "devid" to "23a9c9828da443abbcfa8ab452201faa",
             "devtype" to 1.toString(),
             "queryCondition" to mutableListOf(
-                QueryCondition("s8", "03"),
-                QueryCondition("s2", "杭州互联网法院"),
+//                QueryCondition("s8", "03"),
+//                QueryCondition("s2", "杭州互联网法院"),
+                QueryCondition("s19", "张利民"),
+                QueryCondition("s20", "陕西行中律师事务所"),
+                QueryCondition("s21", "彩礼"),
                 QueryCondition("cprqStart", "2020-10-27"),
-                QueryCondition("cprqEnd", "2020-11-27"),
-//                QueryCondition("s2", "杭州互联网法院")
+//                QueryCondition("cprqEnd", "2020-11-27"),
             )
         )
 
