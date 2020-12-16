@@ -17,13 +17,13 @@ object WenShu {
 
 
     fun getList() {
-        for (i in 1..1) {
+        for (i in 1..10) {
             getDocList(i)
             Thread.sleep(3000)
         }
     }
 
-    private fun getDocList(page: Int = 1, pageSize: Int = 20) {
+    private fun getDocList(page: Int = 1, pageSize: Int = 200) {
         val params = mapOf(
             "pageNum" to page.toString(),
             "pageSize" to pageSize.toString(),
@@ -56,8 +56,9 @@ object WenShu {
                 "request=${q.toJson().b64()}",
                 WenShuRsp::class.java, null
             )
-
-        val decryptTxt = Encrypt.desDecrypt(result.data.content, result.data.secretKey)
+        println( result.data)
+        result.data?.content?:return
+        val decryptTxt = Encrypt.desDecrypt(result.data?.content, result.data?.secretKey)
         //这里是解密后的结果,
         println("这里是解密后的结果  " + decryptTxt)
 
@@ -69,8 +70,8 @@ object WenShu {
             .map { it.caseno + it.casename }.forEach(::println)
 
         //自己根据 结果的docId 进行解析
-        r.queryResult.resultList.also { println(it) }
-                .map { getDetail(it.docId) }
+//        r.queryResult.resultList.also { println(it) }
+//                .map { getDetail(it.docId) }
     }
 
 
@@ -96,7 +97,7 @@ object WenShu {
             )
 
 
-        val detailTxt = Encrypt.desDecrypt(detail.data.content, detail.data.secretKey)
+        val detailTxt = Encrypt.desDecrypt(detail.data?.content, detail.data?.secretKey)
         println(detailTxt)
         println(detailTxt.fromJson<DocDetail>())
 

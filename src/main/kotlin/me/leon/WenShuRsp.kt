@@ -6,12 +6,12 @@ package me.leon
  * @version   1.0.0
  **/
 data class WenShuRsp(
-    val `data`: Data,
+    val `data`: Data?,
     val ret: Ret
 ){
     data class Data(
-            val content: String,
-            val secretKey: String
+            val content: String?,
+            val secretKey: String?
     )
 
     data class Ret(
