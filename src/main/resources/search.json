@@ -1,0 +1,288 @@
+{
+  "ret": {
+    "code": "1"
+  },
+  "data": {
+    "SearchVO": {
+      "list": [
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "全文检索",
+            "cls": "全文",
+            "sid": "21",
+            "show": "1",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "全文",
+            "sid": "21",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "首部",
+            "sid": "22",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "当事人",
+            "sid": "17",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "诉讼记录",
+            "sid": "23",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "事实",
+            "sid": "25",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "理由",
+            "sid": "26",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "判决结果",
+            "sid": "27",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "尾部",
+            "sid": "28",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "全文检索",
+            "key": "其他",
+            "sid": "54",
+            "type": "2"
+          }
+        },
+        {
+          "SearchVO": {
+            "key": "案由",
+            "sid": "11",
+            "show": "1",
+            "type": "4"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "案件名称",
+            "key": "案件名称",
+            "sid": "1",
+            "show": "1",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "案号",
+            "key": "案号",
+            "sid": "7",
+            "show": "1",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "法院名称",
+            "key": "法院名称",
+            "sid": "2",
+            "show": "1",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "法院层级",
+            "key": "法院层级",
+            "cls": "法院层级",
+            "sid": "4",
+            "show": "1",
+            "type": "0"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "案件类型",
+            "key": "案件类型",
+            "cls": "案件类型",
+            "sid": "8",
+            "show": "1",
+            "type": "0"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "审判程序",
+            "key": "审判程序",
+            "sid": "9",
+            "show": "1",
+            "type": "5"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "文书类型",
+            "key": "文书类型",
+            "cls": "文书类型",
+            "sid": "6",
+            "show": "1",
+            "type": "0"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "裁判日期",
+            "key": "裁判日期",
+            "sid": "31",
+            "show": "1",
+            "type": "3"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "案例等级",
+            "key": "案例等级",
+            "cls": "案例等级",
+            "sid": "44",
+            "show": "1",
+            "type": "0"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "公开类型",
+            "key": "公开类型",
+            "cls": "公开类型",
+            "sid": "43",
+            "show": "1",
+            "type": "0"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "审判人员",
+            "key": "审判人员",
+            "sid": "18",
+            "show": "1",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "当事人",
+            "key": "当事人",
+            "sid": "17",
+            "show": "1",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "案例等级",
+            "key": "律所",
+            "sid": "20",
+            "show": "1",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "律师",
+            "key": "律师",
+            "sid": "19",
+            "show": "1",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "法律依据",
+            "key": "法律依据",
+            "sid": "29",
+            "show": "1",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "关键词",
+            "key": "关键词",
+            "sid": "45"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "裁判日期",
+            "key": "裁判日期开始时间",
+            "sid": "cprqStart",
+            "type": "3"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "裁判日期",
+            "key": "裁判日期结束时间",
+            "sid": "cprqEnd",
+            "type": "3"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "审理法院",
+            "key": "审理法院",
+            "sid": "2",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "审理人员",
+            "key": "审理人员",
+            "sid": "18",
+            "type": "1"
+          }
+        },
+        {
+          "SearchVO": {
+            "showname": "上网时间",
+            "key": "上网时间",
+            "sid": "48",
+            "type": "1"
+          }
+        }
+      ]
+    }
+  }
+}
