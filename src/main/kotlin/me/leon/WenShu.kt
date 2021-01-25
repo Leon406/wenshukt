@@ -17,7 +17,7 @@ object WenShu {
 
 
     fun getList() {
-        for (i in 1..10) {
+        for (i in 1..1) {
             getDocList(i)
             Thread.sleep(3000)
         }
@@ -32,12 +32,12 @@ object WenShu {
             "devid" to "23a9c9828da443abbcfa8ab452201faa",
             "devtype" to 1.toString(),
             "queryCondition" to mutableListOf(
-//                QueryCondition("s8", "03"),
+                QueryCondition("s8", "03"),
 //                QueryCondition("s2", "杭州互联网法院"),
-                QueryCondition("s19", "张利民"),
-                QueryCondition("s20", "陕西行中律师事务所"),
-                QueryCondition("s21", "彩礼"),
-                QueryCondition("cprqStart", "2020-10-27"),
+//                QueryCondition("s19", "张利民"),
+//                QueryCondition("s20", "陕西行中律师事务所"),
+//                QueryCondition("s21", "彩礼"),
+//                QueryCondition("cprqStart", "2020-10-27"),
 //                QueryCondition("cprqEnd", "2020-11-27"),
             )
         )
@@ -72,6 +72,7 @@ object WenShu {
         //自己根据 结果的docId 进行解析
 //        r.queryResult.resultList.also { println(it) }
 //                .map { getDetail(it.docId) }
+
     }
 
 
@@ -95,12 +96,9 @@ object WenShu {
                 "http://wenshuapp.court.gov.cn/appinterface/rest.q4w ",
                 "request=${q.toJson().b64()}", WenShuRsp::class.java, null
             )
-
-
         val detailTxt = Encrypt.desDecrypt(detail.data?.content, detail.data?.secretKey)
         println(detailTxt)
         println(detailTxt.fromJson<DocDetail>())
 
     }
-
 }
