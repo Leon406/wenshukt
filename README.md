@@ -1,4 +1,4 @@
-### 分析过程
+### <span id="top">分析过程</span>
 
 参考本人  [blog](https://blog.csdn.net/weixin_38737912/article/details/105253563)
 
@@ -34,7 +34,14 @@
 </ul>
 </details>
 
-
+$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial X}{\partial u} &  \frac{\partial Y}{\partial u} & 0 \\
+\frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0 \\
+\end{vmatrix}
+${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
+$$
 ### LICENSE
 
 ```
@@ -57,3 +64,4 @@ limitations under the License.
 
 
 
+[回到顶部](#top)
