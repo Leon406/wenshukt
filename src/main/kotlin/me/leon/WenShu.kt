@@ -7,10 +7,10 @@ object WenShu {
     @JvmStatic
     fun main(args: Array<String>) {
 
-//        getList()
+        getList()
 
         //详情可以用手机端的接口
-        getDetail("562110e60b3145099361ac8800c0aa89")
+//        getDetail("562110e60b3145099361ac8800c0aa89")
 //        getDetail("fbb3658a336d4ebcbec6ac8300a33e87")
 
     }
@@ -37,8 +37,8 @@ object WenShu {
 //                QueryCondition("s19", "张利民"),
 //                QueryCondition("s20", "陕西行中律师事务所"),
 //                QueryCondition("s21", "彩礼"),
-//                QueryCondition("cprqStart", "2020-10-27"),
-//                QueryCondition("cprqEnd", "2020-11-27"),
+                QueryCondition("cprqStart", "2020-10-27"),
+                QueryCondition("cprqEnd", "2020-11-27"),
             )
         )
 
